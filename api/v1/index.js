@@ -10,8 +10,6 @@ export default function handler(req, res) {
     const referer = req.headers.referer || '';
     if (referer.length > 0) {
       const refererHost = new URL(referer).hostname || '';
-        console.log(refererHost);
-        console.log(HOSTS);
       if (!HOSTS.includes(refererHost)) {
           console.error('referer invalid:', referer);
           res.send({"title": "请自部署该服务", "desc": "https://github.com/xaoxuu/site-info-api/"});
