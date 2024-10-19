@@ -95,6 +95,9 @@ function main(url, callback) {
                 if (isRedirect && location && location != url) {
                     main(location, callback);
                     return;
+                } else {
+                    callback({});
+                    return;
                 }
             }
             getInfo(url, html, (data) => {
