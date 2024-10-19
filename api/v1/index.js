@@ -211,6 +211,7 @@ function getFile(url, callback) {
                     return;
                 } else {
                     callback({});
+                    return;
                 }
             }
             let data = {};
