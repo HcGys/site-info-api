@@ -206,7 +206,7 @@ function getFile(url, callback) {
                 console.log('isRedirect:', isRedirect);
                 console.log('location:', location);
                 if (isRedirect && location && location != url) {
-                    main(location, callback);
+                    getFile(location, callback);
                     return;
                 }
             }
