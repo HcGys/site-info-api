@@ -218,7 +218,7 @@ function getFile(url, callback) {
                 }
             }
             let data = {};
-            data.file = file;
+            data.file = Buffer.from(file, 'binary');
             callback(data);
         });
     });
