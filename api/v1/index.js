@@ -69,6 +69,7 @@ export default function handler(req, res) {
                         data.url = url;
                         cache['file ' + url] = data;
                     }
+                    console.log(data);
                     res.send(data);
                 });
                 break;
