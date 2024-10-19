@@ -30,7 +30,7 @@ export default function handler(req, res) {
 
     const validTypes = ['site', 'voice', 'file'];
 
-    const type = req.query['type'] | 'site';
+    const type = req.query['type'] || 'site';
     if (!validTypes.includes(type)) {
         console.log('type invalid:', type);
         res.send({});
