@@ -95,9 +95,6 @@ function main(url, callback) {
                 if (isRedirect && location && location != url) {
                     main(location, callback);
                     return;
-                } else {
-                    callback({});
-                    return;
                 }
             }
             getInfo(url, html, (data) => {
@@ -211,9 +208,6 @@ function getFile(url, callback) {
                 console.log('location:', location);
                 if (isRedirect && location && location != url) {
                     getFile(location, callback);
-                    return;
-                } else {
-                    callback({});
                     return;
                 }
             }
