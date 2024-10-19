@@ -209,6 +209,8 @@ function getFile(url, callback) {
                 if (isRedirect && location && location != url) {
                     getFile(location, callback);
                     return;
+                } else {
+                    callback({});
                 }
             }
             let data = {};
