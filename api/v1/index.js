@@ -38,7 +38,7 @@ export default function handler(req, res) {
     }
     console.log('type:', type);
     
-    const url = req.query['url'];
+    const url = req.query['url'] || '';
     if (!url.startsWith('http')) {
         console.error('url invalid:', url);
         res.send({});
