@@ -23,6 +23,9 @@ export default function handler(req, res) {
       }
     }
     console.log('referer ok:', referer);
+
+    console.log('prams url:', req.url);
+    
     // 参数 type url
     // type 不存在默认是 site
     // type: site | voice | file
