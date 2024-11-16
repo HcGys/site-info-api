@@ -52,7 +52,7 @@ export default function handler(req, res) {
     res.setHeader("Vercel-CDN-Cache-Control", "max-age=604800");
     if (cache[type + ' ' + url]) {
         console.log('use cache');
-        res.send(cache[url]);
+        res.send(cache[type + ' ' + url]);
     } else {
         switch(type) {
             case 'site':
